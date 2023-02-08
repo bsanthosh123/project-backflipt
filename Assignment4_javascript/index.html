@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <header>
+        <h1 class="title">Expense Tracker</h1>
+    </header>
+    <section class="content">
+        <h3 class="secondTitle">Add a new item: </h3>
+
+
+        <div class="form">
+            <form>
+
+                <div class="formLine left">
+                    <span for="type">Category:</span>
+                    <select id="type" name="category">
+                        <option value="chooseOne">Choose one</option>
+                        <option value="food">food</option>
+                        <option value="investment">investment</option>
+                        <option value="entertainment">entertainment</option>
+                        <option value="bills">bills</option>
+                        <option value="rent">Rent</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="formLine right">
+                    <span for="name">Name:</span>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="formLine right">
+                    <span for="amount">Amount:</span>
+                    <input type="number" name="amount" id="amount" required>
+                </div>
+
+            </form>
+
+        </div>
+    </section>
+    <section class="content">
+        <table class="table" id="table">
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody id="expenseTable">
+
+            </tbody>
+            <tfoot >
+                <tr><td colspan=2> Total Amount</td><td id="tfoot"></td></tr>
+
+            </tfoot>
+        </table>
+    </section>
+    <button onclick="myfn()">Add a new expense</button>
+    <button type="submit" onclick="show()">Print Chart</button>
+    <div id="container" style="width: 100%;height: 100%;">
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    </div>
+
+    <script src="expense.js"></script>
+</body>
+
+</html>
